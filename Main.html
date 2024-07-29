@@ -1,0 +1,1128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>petshop</title>
+  
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="site">
+    <div class="topnav">
+        <div class="search-line">
+            <i class="fa fa-paw" id="open-btn" onclick="openside()"></i>
+            <i class="fa fa-times" id="close-btn" onclick="closeside()"></i>
+            <a href="#" onclick="javascript:play()">
+                <audio id="audio" src="images/sounds/bark.wav"></audio>
+                
+            </a>
+            <input type="text" class="search-form">
+            <span class="input-text" onclick="sorry()"><i class="fa fa-search"></i></span>
+            <h1 style="color: rgb(255, 255, 255);background-color: deepskyblue; height: 55px;"> PetShop</h1>
+        </div>
+        <div class="account-menu">
+            
+            <ul>
+                <li><a href="#" onclick="javascript:sorry()"><i class="fa fa-shopping-cart"></i>Cart</a></li>
+               
+            </ul>
+        </div>
+    </div>
+
+    <header>
+        <div class="side-menu" id="side-menu">
+            <ul>
+                <li>Dogs <i class="fa fa-caret-right"></i>
+                    <ul id="gettop">
+                        <li><a href="#food">Food</a></li>
+                        <li><a href="#toys">Accessories</a></li>
+                        <li><a href="#clothes">Clothes</a></li>
+                        <li><a href="#med">Medical</a></li>
+                    </ul>
+                </li>
+                <li>Cats <i class="fa fa-caret-right"></i>
+                    <ul id="gettop1">
+                        <li><a href="#cat food">Food</a></li>
+                        <li><a href="#Cattoys">Accessories</a></li>
+                        <li><a href="#catclothes">Clothes</a></li>
+                        <li><a href="#med">Medical</a></li>
+                    </ul>
+                </li>
+
+                <li>Birds <i class="fa fa-caret-right"></i>
+                    <ul id="gettop3">
+                        <li><a href="#birdfood">Food</a></li>
+                        <li><a href="#birdtoys">Accessories</a></li>
+                        
+                    </ul>
+                </li>
+                
+            </ul>
+        </div>
+        <div class="slideshow">
+            <div id="slideshow" class="carousel slide carousel-fade" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <picture>
+                            <source media="(min-width: 1050px)" srcset="images/low/birdboxyellow.jpg" class="d-block w-100">
+                            <img src="images/high/birdboxyellow.jpg" class="d-block w-100" alt="S1">
+                        </picture>
+                    </div>
+                    <div class="carousel-item">
+                        <picture>
+                            <source media="(min-width: 1050px)" srcset="images/low/cattoy.jpg" class="d-block w-100">
+                            <img src="images/high/cattoy.jpg" class="d-block w-100" alt="S2">
+                        </picture>
+                    </div>
+                    <div class="carousel-item">
+                        <picture>
+                            <source media="(min-width: 1050px)" srcset="images/low/foodham.jpg" class="d-block w-100">
+                            <img src="images/high/foodham.jpg" class="d-block w-100" alt="S3">
+                        </picture>
+                    </div>
+                    <div class="carousel-item">
+                        <picture>
+                            <source media="(min-width: 1050px)" srcset="images/low/dogtoyfris.jpg" class="d-block w-100">
+                            <img src="images/high/dogtoyfris.jpg" class="d-block w-100" alt="S4">
+                        </picture>
+                    </div>
+                </div>
+                <ol class="carousel-indicators">
+                    <li data-target="#slideshow" data-slide-to="0" class="active"></li>
+                    <li data-target="#slideshow" data-slide-to="1"></li>
+                    <li data-target="#slideshow" data-slide-to="2"images
+                    <li data-target="#slideshow" data-slide-to="3"></li>
+                </ol>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="categories">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="single-prod">
+                            <a href="#food">
+                                <picture>
+                                    <source media="(min-width: 1050px)" srcset="images/low/foodham.jpg">
+                                    <img src="images/high/foodham.jpg" alt="pic1">
+                                </picture>
+                            </a>
+                            <div class="overlay-up">
+                                <h3>Food</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="single-prod">
+                            <a href="#toys">
+                                <picture>
+                                    <source media="(min-width: 1050px)" srcset="images/low/birdtoy.jpg">
+                                    <img src="images/high/birdtoy.jpg" alt="pic1">
+                                </picture>
+                            </a>
+                            <div class="overlay-up">
+                                <h3>Accessories</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="single-prod">
+                            <a href="#clothes">
+                                <picture>
+                                    <source media="(min-width: 1050px)" srcset="images/low/dogclothes.jpg">
+                                    <img src="images/high/dogclothes.jpg" alt="pic2">
+                                </picture>
+                            </a>
+                            <div class="overlay-up">
+                                <h3>Clothes</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="single-prod">
+                            <a href="#med">
+                                <picture>
+                                    <source media="(min-width: 1050px)" srcset="images/low/dogmed.jpg">
+                                    <img src="images/high/dogmed.jpg" alt="pic3">
+                                </picture>
+                            </a>
+                            <div class="overlay-up">
+                                <h3>Medical</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="categsecs">
+            <div class="container">
+                <div id="food"></div>
+                <div class="categ-title">
+                    <h2>Food of Dog</h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="prod-top">
+                            <picture>
+                                <source media="(min-width: 1050px)" srcset="images/low/dogfoodbone.jpg">
+                                <img src="images/high/dogfoodbone.jpg" alt="pic1">
+                            </picture>
+                            <div class="overlay-right">
+                                
+                                <button onclick="sorry()" type="button" class="btn btn-secondary" title="Cart">
+                                <i class="fa fa-cart-plus"></i>
+                            </button>
+                            </div>
+                        </div>
+                        <div class="prod-bot text-center">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-o"></i>
+                            <h3>Dog Food Bone</h3>
+                            <h5>299 INR</h5>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="prod-top">
+                            <picture>
+                                <source media="(min-width: 1050px)" srcset="images/low/dogfood.jpg">
+                                <img src="images/high/dogfood.jpg" alt="pic1">
+                            </picture>
+                            <div class="overlay-right">
+                                
+                                <button onclick="sorry()" type="button" class="btn btn-secondary" title="Cart">
+                                <i class="fa fa-cart-plus"></i>
+                            </button>
+                            </div>
+                        </div>
+                        <div class="prod-bot text-center">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-o"></i>
+                            <i class="fa fa-star-o"></i>
+                            <h3>Dog Food</h3>
+                            <h5>5999 INR</h5>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="prod-top">
+                            <picture>
+                                <source media="(min-width: 1050px)" srcset="images/hel.jpg">
+                                <img src="images/hel.jpg" alt="pic1">
+                            </picture>
+                            <div class="overlay-right">
+                                
+                                <button onclick="sorry()" type="button" class="btn btn-secondary" title="Cart">
+                                <i class="fa fa-cart-plus"></i>
+                            </button>
+                            </div>
+                        </div>
+                        <div class="prod-bot text-center">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-o"></i>
+                            <i class="fa fa-star-o"></i>
+                            <h3>Healthy Food</h3>
+                            <h5>6999 INR</h5>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="prod-top">
+                            <picture>
+                                <source media="(min-width: 1050px)" srcset="images/pet.jpg">
+                                <img src="images/pet.jpg" alt="pic1">
+                            </picture>
+                            <div class="overlay-right">
+                                
+                                <button onclick="sorry()" type="button" class="btn btn-secondary" title="Cart">
+                                <i class="fa fa-cart-plus"></i>
+                            </button>
+                            </div>
+                        </div>
+                        <div class="prod-bot text-center">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-o"></i>
+                            <i class="fa fa-star-o"></i>
+                            <h3>pedigree Food</h3>
+                            <h5>6999 INR</h5>
+                        </div>
+                    </div>
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="categsecs">
+            <div class="container">
+                <div id="birdfood"></div>
+                <div class="categ-title">
+                    <h2>Food of Birds
+                    </h2>
+                </div>
+                <div class="row">
+    
+
+                <div class="col-md-3">
+                    <div class="prod-top">
+                        <picture>
+                            <source media="(min-width: 1050px)" srcset="images/low/birdtoy.jpg">
+                            <img src="images/high/birdtoy.jpg" alt="pic1">
+                        </picture>
+                        <div class="overlay-right">
+                            <button onclick="sorry()" type="button" class="btn btn-secondary" title="Cart">
+                                <i class="fa fa-cart-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="prod-bot text-center">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                        <h3>Bird Food Balls</h3>
+                        <h5>500 INR</h5>
+                    </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="prod-top">
+                            <picture>
+                                <source media="(min-width: 1050px)" srcset="images/birdf.jpg">
+                                <img src="images/birdf.jpg" alt="pic1">
+                            </picture>
+                            <div class="overlay-right">
+                                <button onclick="sorry()" type="button" class="btn btn-secondary" title="Cart">
+                                    <i class="fa fa-cart-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="prod-bot text-center">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                            <h3>Bird Food</h3>
+                            <h5>896 INR</h5>
+                        </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="prod-top">
+                                <picture>
+                                    <source media="(min-width: 1050px)" srcset="images/food2.jpg">
+                                    <img src="images/food2.jpg" alt="pic1">
+                                </picture>
+                                <div class="overlay-right">
+                                    <button onclick="sorry()" type="button" class="btn btn-secondary" title="Cart">
+                                        <i class="fa fa-cart-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="prod-bot text-center">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-o"></i>
+                                <h3>Food with Flavour</h3>
+                                <h5>1289 INR</h5>
+                            </div>
+                            </div>
+                    <div class="col-md-3">
+                        <div class="prod-top">
+                            <picture>
+                                <source media="(min-width: 1050px)" srcset="images/bird.jpg">
+                                <img src="images/bird.jpg" alt="pic1">
+                            </picture>
+                            <div class="overlay-right">
+                                
+                                <button onclick="sorry()" type="button" class="btn btn-secondary" title="Cart">
+                                <i class="fa fa-cart-plus"></i>
+                            </button>
+                            </div>
+                        </div>
+                        <div class="prod-bot text-center">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-o"></i>
+                            <i class="fa fa-star-o"></i>
+                            <h3>Wild Bird Food</h3>
+                            <h5>2999 INR</h5>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+                
+        <section class="categsecs">
+            <div class="container">
+                <div id="cat food"></div>
+                <div class="categ-title">
+                    <h2>Food of Cat
+                    </h2>
+                </div>
+                <div class="row">
+                <div class="col-md-3">
+                    <div class="prod-top">
+                        <picture>
+                            <source media="(min-width: 1050px)" srcset="images/fri.jpg">
+                            <img src="images/fri.jpg" alt="pic1">
+                        </picture>
+                        <div class="overlay-right">
+                            <button onclick="sorry()" type="button" class="btn btn-secondary" title="Cart">
+                                <i class="fa fa-cart-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="prod-bot text-center">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                        <h3>friskies Food</h3>
+                        <h5>599 INR</h5>
+                    </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="prod-top">
+                            <picture>
+                                <source media="(min-width: 1050px)" srcset="images/food.jpg">
+                                <img src="images/food.jpg" alt="pic1">
+                            </picture>
+                            <div class="overlay-right">
+                                <button onclick="sorry()" type="button" class="btn btn-secondary" title="Cart">
+                                    <i class="fa fa-cart-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="prod-bot text-center">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                            <h3>Daily Food</h3>
+                            <h5>799 INR</h5>
+                        </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="prod-top">
+                                <picture>
+                                    <source media="(min-width: 1050px)" srcset="images/meow.jpg">
+                                    <img src="images/meow.jpg" alt="pic1">
+                                </picture>
+                                <div class="overlay-right">
+                                    <button onclick="sorry()" type="button" class="btn btn-secondary" title="Cart">
+                                        <i class="fa fa-cart-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="prod-bot text-center">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-o"></i>
+                                <h3>Meow original</h3>
+                                <h5>1599 INR</h5>
+                            </div>
+                            </div>
+                    <div class="col-md-3">
+                        <div class="prod-top">
+                            <picture>
+                                <source media="(min-width: 1050px)" srcset="images/cat.jpg">
+                                <img src="images/cat.jpg" alt="pic1">
+                            </picture>
+                            <div class="overlay-right">
+                                
+                                <button onclick="sorry()" type="button" class="btn btn-secondary" title="Cart">
+                                <i class="fa fa-cart-plus"></i>
+                            </button>
+                            </div>
+                        </div>
+                        <div class="prod-bot text-center">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-o"></i>
+                            <i class="fa fa-star-o"></i>
+                            <h3>Whiskas Food</h3>
+                            <h5>6999 INR</h5>
+                        </div>
+                    </div>
+                </section>
+        <section class="categsecs">
+            <div class="container">
+                <div id="toys"></div>
+                <div class="categ-title">
+                    <h2>Dog Acc.</h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="prod-top">
+                            <picture>
+                                <source media="(min-width: 1050px)" srcset="images/low/dogtoy.jpg">
+                                <img src="images/high/dogtoy.jpg" alt="pic1">
+                            </picture>
+                            <div class="overlay-right">
+                                
+                                <button onclick="sorry()" type="button" class="btn btn-secondary" title="Cart">
+                                <i class="fa fa-cart-plus"></i>
+                            </button>
+                            </div>
+                        </div>
+                        <div class="prod-bot text-center">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                            <h3>Dog Toy Spidey</h3>
+                            <h5>299 INR</h5>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="prod-top">
+                            <picture>
+                                <source media="(min-width: 1050px)" srcset="images/low/dogtoybone.jpg">
+                                <img src="images/high/dogtoybone.jpg" alt="pic1">
+                            </picture>
+                            <div class="overlay-right">
+                                
+                                <button onclick="sorry()" type="button" class="btn btn-secondary" title="Cart">
+                                <i class="fa fa-cart-plus"></i>
+                            </button>
+                            </div>
+                        </div>
+                        <div class="prod-bot text-center">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <h3>Dog Toy Bone</h3>
+                            <h5>319 INR</h5>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="prod-top">
+                            <picture>
+                                <source media="(min-width: 1050px)" srcset="images/low/dogtoyfris.jpg">
+                                <img src="images/high/dogtoyfris.jpg" alt="pic1">
+                            </picture>
+                            <div class="overlay-right">
+                                
+                                <button onclick="sorry()" type="button" class="btn btn-secondary" title="Cart">
+                                <i class="fa fa-cart-plus"></i>
+                            </button>
+                            </div>
+                        </div>
+                        <div class="prod-bot text-center">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                            <i class="fa fa-star-o"></i>
+                            <h3>Dog Toy Frisbee</h3>
+                            <h5>450 INR</h5>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="prod-top">
+                            <picture>
+                                <source media="(min-width: 1050px)" srcset="images/low/dogclothes.jpg">
+                                <img src="images/high/dogclothes.jpg" alt="pic1">
+                            </picture>
+                            <div class="overlay-right">
+                                
+                                <button onclick="sorry()" type="button" class="btn btn-secondary" title="Cart">
+                                <i class="fa fa-cart-plus"></i>
+                            </button>
+                            </div>
+                        </div>
+                        <div class="prod-bot text-center">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <h3>Dog Toy Banana</h3>
+                            <h5>265 INR</h5>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="categsecs">
+                <div class="container">
+                    <div id="birdtoys"></div>
+                    <div class="categ-title">
+                        <h2>Bird Acc.</h2>
+                    </div>
+          
+
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="prod-top">
+                            <picture>
+                                <source media="(min-width: 1050px)" srcset="images/low/birdboxtrees.jpg">
+                                <img src="images/high/birdboxtrees.jpg" alt="pic1">
+                            </picture>
+                            <div class="overlay-right">
+                                
+                                <button onclick="sorry()" type="button" class="btn btn-secondary" title="Cart">
+                                <i class="fa fa-cart-plus"></i>
+                            </button>
+                            </div>
+                        </div>
+                        <div class="prod-bot text-center">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                            <h3>Bird House Round[WOODEN]</h3>
+                            <h5>2050 INR</h5>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="prod-top">
+                            <picture>
+                                <source media="(min-width: 1050px)" srcset="images/low/birdboxwood.jpg">
+                                <img src="images/high/birdboxwood.jpg" alt="pic1">
+                            </picture>
+                            <div class="overlay-right">
+                               
+                                <button onclick="sorry()" type="button" class="btn btn-secondary" title="Cart">
+                                <i class="fa fa-cart-plus"></i>
+                            </button>
+                            </div>
+                        </div>
+                        <div class="prod-bot text-center">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-o"></i>
+                            <i class="fa fa-star-o"></i>
+                            <h3>Bird House Square</h3>
+                            <h5>6580 INR</h5>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="prod-top">
+                            <picture>
+                                <source media="(min-width: 1050px)" srcset="images/low/birdboxyellow.jpg">
+                                <img src="images/high/birdboxyellow.jpg" alt="pic1">
+                            </picture>
+                            <div class="overlay-right">
+                                
+                                <button onclick="sorry()" type="button" class="btn btn-secondary" title="Cart">
+                                <i class="fa fa-cart-plus"></i>
+                            </button>
+                            </div>
+                        </div>
+                        <div class="prod-bot text-center">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-o"></i>
+                            <h3>Bird House Yellow[Two pair]</h3>
+                            <h5>8050 INR</h5>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="prod-top">
+                            <picture>
+                                <source media="(min-width: 1050px)" srcset="images/low/birdtoy.jpg">
+                                <img src="images/high/birdtoy.jpg" alt="pic1">
+                            </picture>
+                            <div class="overlay-right">
+                               
+                                <button onclick="sorry()" type="button" class="btn btn-secondary" title="Cart">
+                                <i class="fa fa-cart-plus"></i>
+                            </button>
+                            </div>
+                        </div>
+                        <div class="prod-bot text-center">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <h3>Bird Toy</h3>
+                            <h5>199 INR</h5>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="categsecs">
+                <div class="container">
+                    <div id="Cattoys"></div>
+                    <div class="categ-title">
+                        <h2>Cat Acc.</h2>
+                    </div>
+          
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="prod-top">
+                            <picture>
+                                <source media="(min-width: 1050px)" srcset="images/low/cattoy.jpg">
+                                <img src="images/high/cattoy.jpg" alt="pic1">
+                            </picture>
+                            <div class="overlay-right">
+                                
+                                <button onclick="sorry()" type="button" class="btn btn-secondary" title="Cart">
+                                <i class="fa fa-cart-plus"></i>
+                            </button>
+                            </div>
+                        </div>
+                        <div class="prod-bot text-center">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-o"></i>
+                            <h3>Cat Toy Ball[Plastic]</h3>
+                            <h5>450 INR</h5>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="prod-top">
+                            <picture>
+                                <source media="(min-width: 1050px)" srcset="images/bad.jpg">
+                                <img src="images/bad.jpg" alt="pic1">
+                            </picture>
+                            <div class="overlay-right">
+                                
+                                <button onclick="sorry()" type="button" class="btn btn-secondary" title="Cart">
+                                <i class="fa fa-cart-plus"></i>
+                            </button>
+                            </div>
+                        </div>
+                        <div class="prod-bot text-center">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-o"></i>
+                            <h3>Bad for Cat</h3>
+                            <h5>589 INR</h5>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="prod-top">
+                            <picture>
+                                <source media="(min-width: 1050px)" srcset="images/low/cattoyhigh.jpg">
+                                <img src="images/high/cattoyhigh.jpg" alt="pic1">
+                            </picture>
+                            <div class="overlay-right">
+                                
+                                <button onclick="sorry()" type="button" class="btn btn-secondary" title="Cart">
+                                <i class="fa fa-cart-plus"></i>
+                            </button>
+                            </div>
+                        </div>
+                        <div class="prod-bot text-center">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                            <i class="fa fa-star-o"></i>
+                            <h3>Cat Hanging Toy</h3>
+                            <h5>650 INR</h5>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="prod-top">
+                            <picture>
+                                <source media="(min-width: 1050px)" srcset="images/low/catbag.jpg">
+                                <img src="images/high/catbag.jpg" alt="pic1">
+                            </picture>
+                            <div class="overlay-right">
+                                
+                                <button onclick="sorry()" type="button" class="btn btn-secondary" title="Cart">
+                                <i class="fa fa-cart-plus"></i>
+                            </button>
+                            </div>
+                        </div>
+                        <div class="prod-bot text-center">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-o"></i>
+                            <h3>Bag for Cat</h3>
+                            <h5>8999 INR</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="categsecs">
+            <div class="container">
+                <div id="clothes"></div>
+                <div class="categ-title">
+                    <h2>Clothes</h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="prod-top">
+                            <picture>
+                                <source media="(min-width: 1050px)" srcset="images/low/dogclothes.jpg">
+                                <img src="images/high/dogclothes.jpg" alt="pic1">
+                            </picture>
+                            <div class="overlay-right">
+                              
+                                <button onclick="sorry()" type="button" class="btn btn-secondary" title="Cart">
+                                <i class="fa fa-cart-plus"></i>
+                            </button>
+                            </div>
+                        </div>
+                        <div class="prod-bot text-center">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <h3>Dog Banana Clothes</h3>
+                            <h5>699 INR</h5>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="prod-top">
+                            <picture>
+                                <source media="(min-width: 1050px)" srcset="images/cap.jpg">
+                                <img src="images/cap.jpg" alt="pic1">
+                            </picture>
+                            <div class="overlay-right">
+                              
+                                <button onclick="sorry()" type="button" class="btn btn-secondary" title="Cart">
+                                <i class="fa fa-cart-plus"></i>
+                            </button>
+                            </div>
+                        </div>
+                        <div class="prod-bot text-center">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <h3>cloth with Cap </h3>
+                            <h5>699 INR</h5>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="prod-top">
+                            <picture>
+                                <source media="(min-width: 1050px)" srcset="images/low/dogmask.jpg">
+                                <img src="images/high/dogmask.jpg" alt="pic1">
+                            </picture>
+                            <div class="overlay-right">
+                                
+                                <button onclick="sorry()" type="button" class="btn btn-secondary" title="Cart">
+                                <i class="fa fa-cart-plus"></i>
+                            </button>
+                            </div>
+                        </div>
+                        <div class="prod-bot text-center">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                            <i class="fa fa-star-o"></i>
+                            <i class="fa fa-star-o"></i>
+                            <i class="fa fa-star-o"></i>
+                            <h3>Dog Mask</h3>
+                            <h5>50 INR</h5>
+                        </div>
+                    </div>
+            <div class="col-md-3">
+                <div class="prod-top">
+                    <picture>
+                        <source media="(min-width: 1050px)" srcset="images/hood.jpg">
+                        <img src="images/hood.jpg" alt="pic1">
+                    </picture>
+                    <div class="overlay-right">
+                        <button onclick="sorry()" type="button" class="btn btn-secondary" title="Cart">
+                        <i class="fa fa-cart-plus"></i>
+                    </button>
+                    </div>
+                </div>
+                <div class="prod-bot text-center">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                    <i class="fa fa-star-o"></i>
+                    <i class="fa fa-star-o"></i>
+                    <i class="fa fa-star-o"></i>
+                    <h3>Dog Hoodie Clothes</h3>
+                    <h5>460 INR</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+        </section>
+        <section class="categsecs">
+            <div class="container">
+                <div id="catclothes"></div>
+                <div class="categ-title">
+                    <h2>Cat Clothes</h2>
+                </div>
+                <div class="row">
+                <div class="col-md-3">
+                    <div class="prod-top">
+                        <picture>
+                            <source media="(min-width: 1050px)" srcset="images/low/catclothes.jpg">
+                            <img src="images/low/catclothes.jpg" alt="pic1">
+                        </picture>
+                        <div class="overlay-right">
+                           
+                            <button onclick="sorry()" type="button" class="btn btn-secondary" title="Cart">
+                            <i class="fa fa-cart-plus"></i>
+                        </button>
+                        </div>
+                    </div>
+                    <div class="prod-bot text-center">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                        <i class="fa fa-star-o"></i>
+                        <i class="fa fa-star-o"></i>
+                        <i class="fa fa-star-o"></i>
+                        <h3>Cat OldStyle Clothes</h3>
+                        <h5>460 INR</h5>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="prod-top">
+                        <picture>
+                            <source media="(min-width: 1050px)" srcset="images/winter.jpg">
+                            <img src="images/winter.jpg" alt="pic1">
+                        </picture>
+                        <div class="overlay-right">
+                           
+                            <button onclick="sorry()" type="button" class="btn btn-secondary" title="Cart">
+                            <i class="fa fa-cart-plus"></i>
+                        </button>
+                        </div>
+                    </div>
+                    <div class="prod-bot text-center">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                        <i class="fa fa-star-o"></i>
+                        <i class="fa fa-star-o"></i>
+                        <i class="fa fa-star-o"></i>
+                        <h3>Winter Cat cloth</h3>
+                        <h5>500 INR</h5>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="prod-top">
+                        <picture>
+                            <source media="(min-width: 1050px)" srcset="images/dress.jpg">
+                            <img src="images/dress.jpg" alt="pic1">
+                        </picture>
+                        <div class="overlay-right">
+                           
+                            <button onclick="sorry()" type="button" class="btn btn-secondary" title="Cart">
+                            <i class="fa fa-cart-plus"></i>
+                        </button>
+                        </div>
+                    </div>
+                    <div class="prod-bot text-center">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                        <i class="fa fa-star-o"></i>
+                        <i class="fa fa-star-o"></i>
+                        <i class="fa fa-star-o"></i>
+                        <h3>Cat Dress</h3>
+                        <h5>899 INR</h5>
+                    </div>
+                </div>
+            
+        <div class="col-md-3">
+            <div class="prod-top">
+                <picture>
+                    <source media="(min-width: 1050px)" srcset="images/cloth.jpg">
+                    <img src="images/cloth.jpg" alt="pic1">
+                </picture>
+                <div class="overlay-right">
+                   
+                    <button onclick="sorry()" type="button" class="btn btn-secondary" title="Cart">
+                    <i class="fa fa-cart-plus"></i>
+                </button>
+                </div>
+            </div>
+            <div class="prod-bot text-center">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-o"></i>
+                <i class="fa fa-star-o"></i>
+                <i class="fa fa-star-o"></i>
+                <i class="fa fa-star-o"></i>
+                <h3>Winter Clothes</h3>
+                <h5>599 INR</h5>
+            </div>
+        </div>
+    </div>
+</div>
+        </section>
+
+        <section class="categsecs">
+            <div class="container">
+                <div id="med"></div>
+                <div class="categ-title">
+                    <h2>Medical</h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="prod-top">
+                            <picture>
+                                <source media="(min-width: 1050px)" srcset="images/low/dogmask.jpg">
+                                <img src="images/high/dogmask.jpg" alt="pic1">
+                            </picture>
+                            <div class="overlay-right">
+                                
+                                <button onclick="sorry()" type="button" class="btn btn-secondary" title="Cart">
+                                <i class="fa fa-cart-plus"></i>
+                            </button>
+                            </div>
+                        </div>
+                        <div class="prod-bot text-center">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                            <i class="fa fa-star-o"></i>
+                            <i class="fa fa-star-o"></i>
+                            <i class="fa fa-star-o"></i>
+                            <h3>Dog Mask</h3>
+                            <h5>599 INR</h5>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="prod-top">
+                            <picture>
+                                <source media="(min-width: 1050px)" srcset="images/low/dogmed.jpg">
+                                <img src="images/high/dogmed.jpg" alt="pic1">
+                            </picture>
+                            <div class="overlay-right">
+                                
+                                <button onclick="sorry()" type="button" class="btn btn-secondary" title="Cart">
+                                <i class="fa fa-cart-plus"></i>
+                            </button>
+                            </div>
+                        </div>
+                        <div class="prod-bot text-center">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                            <h3>Dog Medical Collar</h3>
+                            <h5>3999 INR</h5>
+                        </div>
+                    </div>
+                    
+                        <div class="col-md-3">
+                            <div class="prod-top">
+                                <picture>
+                                    <source media="(min-width: 1050px)" srcset="images/sky.jpg">
+                                    <img src="images/sky.jpg" alt="pic1">
+                                </picture>
+                                <div class="overlay-right">
+                                   
+                                    <button onclick="sorry()" type="button" class="btn btn-secondary" title="Cart">
+                                    <i class="fa fa-cart-plus"></i>
+                                </button>
+                                </div>
+                            </div>
+                            <div class="prod-bot text-center">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-o"></i>
+                                <i class="fa fa-star-o"></i>
+                                <i class="fa fa-star-o"></i>
+                                <i class="fa fa-star-o"></i>
+                                <h3>Cat Medicin</h3>
+                                <h5>460 INR</h5>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </section>
+      
+    </main>
+
+    <footer>
+        <div class="container t-center">
+            <div class="row">
+                <div class="col-md-4">
+                    <h1>Useful Info</h1>
+                    <p>Upcoming Discounts</p>
+                    <p>Return Policy</p>
+                    <p><a href="javascript:priv()">Privacy Policy</a></p>
+                    <p>Terms of Use</p>
+                </div>
+                <div class="col-md-4">
+                    <h1>About Us</h1>
+                    <p>
+                        We are a small company that loves<br> to see animals happy and well-treated.<br> Our products are 100% original<br> and safe for your pet.<br><br> Thank you for selecting us!<br><br>
+                        We take reference from W3school and javatpoint.
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <h1>Find Us on:</h1>
+                    <div class="media">
+                        <ul>
+                            <li>
+                                <a href="https://www.facebook.com/vraj1967?mibextid=ZbWKwL" target="_blank">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Facebook_f_logo_%282019%29.svg/120px-Facebook_f_logo_%282019%29.svg.png" alt="Facebook Logo" class="fb"></a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/vraj_1967?igsh=MWo0OTA1cWllbnk0aQ==" target="_blank">
+                                    <img src="https://lh3.googleusercontent.com/2sREY-8UpjmaLDCTztldQf6u2RGUtuyf6VT5iyX3z53JS4TdvfQlX-rNChXKgpBYMw" alt="Instagram Logo" class="insta"></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <h1>Subscribe and Appreciate:</h1>
+                    <form action="">
+                        <input type="email" placeholder="Email address" name="mail" size="30px">
+                        <input type="reset" value="&#xf1d8;">
+                        
+                    </form>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">©2024 PetShop®</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    </div>
+</body>
+
+</html>
